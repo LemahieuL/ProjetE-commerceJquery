@@ -13,38 +13,34 @@
 <body>
   <header class="container-fluid">
     <!--NavBar du haut-->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-        <button class="navbar-toggler navbar-left" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      <a class="navbar-brand" href="#">Site team Luc</a>
-      <div class="navbar-nav">
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="col-4 align-items-center align-self-center">
-            <a class="nav-item nav-link" href="#">Processeur<span class="sr-only">(current)</span></a>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light row" style="background-color: #e3f2fd;">
+      <a class="navbar-brand col-md-2" href="#">Site team Luc</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="navbar-nav col-lg-10">
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="col-3">
+              <a class="nav-item nav-link" href="#">Processeur</a>
+            </div>
+            <div class="col-3">
+              <a class="nav-item nav-link" href="#">Carte Mère</a>
+            </div>
+            <div class="col-3">
+              <a class="nav-item nav-link" href="#">Carte graphique</a>
+            </div>
+            <div class="col-3">
+              <a class="nav-item nav-link" href="#">Mémoire PC/RAM</a>
+            </div>
           </div>
-          <div class="col-4 align-self-center">
-            <a class="nav-item nav-link" href="#">Carte Mère</a>
-          </div>
-          <div class="col-4 align-self-center">
-            <a class="nav-item nav-link" href="#">Carte graphique</a>
-          </div>
-          <div class="col-4 align-self-center">
-            <a class="nav-item nav-link" href="#">Mémoire PC/RAM</a>
-          </div>
+          <a class="navbar-nav"><i class="fas fa-cart-arrow-down" data-toggle="modal" data-target="#exampleModal"></i></a>
         </div>
-        <div class="navbar-nav row">
-          <div class="col-12">
-        <a class="navbar-nav" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-cart-arrow-down"></i></a>
-      </div>
-        </div>
-      </div>
     </nav>
 
   </header>
   <main class="container-fluid">
     <div class="row">
-      <div class="col-3">
+      <div class="col-lg-3 col-sm-12 pt-2">
         <!--Nav bar left luc -->
         <div class="row">
           <div class="col-12">
@@ -60,7 +56,7 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <input type="checkbox" name="graphics card" value="" id="graphics card"/>
+            <input type="checkbox" name="graphics-card" value="" id="graphics-card"/>
             <label for="graphics card">Carte graphique</label>
           </div>
         </div>
@@ -71,12 +67,12 @@
           </div>
         </div>
       </div>
-      <div class="col-9 pl-5">
+      <div class="col-lg-9 col-sm-12 pl-5">
         <!-- Category Graphic Card -->
         <!-- Product 1 -->
         <div class="row category" data-category="graphiccard">
           <div class="col-2">
-            <img src="image/graphiccard/1.jpg" alt="Carte Graphique MSI GTX 1060">
+            <img src="image/graphiccard/1.jpg" alt="Carte Graphique MSI GTX 1060" />
           </div>
           <div class="col-8">
             <div class="row">
