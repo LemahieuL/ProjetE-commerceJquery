@@ -39,29 +39,55 @@ $(function(){
 
   window.tableauPanier = [
     [1, "gtx 960  GAMER", 2, "48.45"],
-    [2, "Titant X geforce 1080", 2, "299.19"],
-    [3, "MSI GeForce GTX 1050 Ti Gaming X - 4 Go", 2, "299.19"],
-    [4, "MSI GeForce GTX 1060 6GT OC V1 - 6 Go", 2, "299.19"],
-    [5, "Titant X geforce 1080", 2, "299.19"],
+    // [2, "Titant X geforce 1080", 2, "299.19"],
+    // [3, "MSI GeForce GTX 1050 Ti Gaming X - 4 Go", 2, "299.19"],
+    // [4, "MSI GeForce GTX 1060 6GT OC V1 - 6 Go", 2, "299.19"],
+    // [5, "Titant X geforce 1080", 2, "299.19"],
   ]
+
+  var referenceExist = function(idProduit){
+
+    window.valexist = false;
+    var n = window.tableauPanier.length;
+    for( var i=0; i <n ; i++){
+      var tabProduit = window.tableauPanier[i];
+      if( (result = jQuery.inArray(idProduit,tabProduit)) != -1 ){
+        if( result == 0){
+          return tabProduit[2];
+        }
+      }
+    }
+    return false;
+
+  }
+
+  var modifierQTProduitPanier = function(idProduit, qtProduit){
+    var n = window.tableauPanier.length;
+    for( var i=0; i <n ; i++){
+      var tabProduit = window.tableauPanier[i];
+      if( (result = jQuery.inArray(idProduit,tabProduit)) != -1 ){
+        if( result == 0){
+          tabProduit[2] = Number(qtProduit);
+          return tabProduit[2];
+        }
+      }
+    }
+    return false;
+  }
 
   //ajouterAuPanier(5, "Titant X geforce 1080", "299.19");
   //idProduit, titreProduit, prixproduit
-  var ajouterAuPanier = function(){
-    window.valexist = false;
-    window.tableauPanier.forEach(function(element, index) {
-
-      var result = -1;
-      if( (result = jQuery.inArray(2,element)) != -1 ){
-        if( result == 0){
-          window.valexist = true;
-          console.log(window.valexist)
-        }
-      }
-    })
+  var ajouterAuPanier = function(idProduit, titreProduit, prixproduit){
+    if(  referenceExist(idProduit) !== false ){
+      var newQt = Number(referenceExist(idProduit)) + 1;
+      modifierQTProduitPanier(5, newQt);
+    }else{
+      window.tableauPanier.push([5, "Titant X geforce 1080", 1, "299.19"])
+    }
 
   }
-  ajouterAuPanier();
+  //ajouterAuPanier(5, "Titant X geforce 1080", "299.19");
+
 
 
   paintPanier();
