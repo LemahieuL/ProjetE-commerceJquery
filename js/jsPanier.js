@@ -1,10 +1,21 @@
 // partie de florent qui gere le panier
 var tableauProduits = [];
 var PrixTotalPanier = 0;
-var quantiteProduitPanier
+var quantiteProduitPanier;
+window.tableauPanier = [
+  [1, "gtx 960  GAMER", 2, "48.45"],
+  // [2, "Titant X geforce 1080", 2, "299.19"],
+  // [3, "MSI GeForce GTX 1050 Ti Gaming X - 4 Go", 2, "299.19"],
+  // [4, "MSI GeForce GTX 1060 6GT OC V1 - 6 Go", 2, "299.19"],
+  // [5, "Titant X geforce 1080", 2, "299.19"],
+]
+
+
 $(function(){
 
-  var addProduitDOMPanier = function(index, idProduit, title, qt, price){
+
+
+  window.addProduitDOMPanier = function(index, idProduit, title, qt, price){
     var modalProduitElement = `<div class="row produitPanier" data-id-panier="${index}">
       <div class="col-1 idProduit">
         ${idProduit}
@@ -27,7 +38,7 @@ $(function(){
 
     $(".modal-body .container-fluid").append(modalProduitElement);
   }
-  var paintPanier = function(){
+  window.paintPanier = function(){
     $(".modal-body .container-fluid").html('');
     window.tableauPanier.forEach(function(element, index) {
       addProduitDOMPanier(index, element[0], element[1], element[2], element[3])
@@ -35,17 +46,7 @@ $(function(){
     })
   }
 
-
-
-  window.tableauPanier = [
-    [1, "gtx 960  GAMER", 2, "48.45"],
-    // [2, "Titant X geforce 1080", 2, "299.19"],
-    // [3, "MSI GeForce GTX 1050 Ti Gaming X - 4 Go", 2, "299.19"],
-    // [4, "MSI GeForce GTX 1060 6GT OC V1 - 6 Go", 2, "299.19"],
-    // [5, "Titant X geforce 1080", 2, "299.19"],
-  ]
-
-  var referenceExist = function(idProduit){
+  window.referenceExist = function(idProduit){
 
     window.valexist = false;
     var n = window.tableauPanier.length;
@@ -61,7 +62,7 @@ $(function(){
 
   }
 
-  var modifierQTProduitPanier = function(idProduit, qtProduit){
+  window.modifierQTProduitPanier = function(idProduit, qtProduit){
     var n = window.tableauPanier.length;
     for( var i=0; i <n ; i++){
       var tabProduit = window.tableauPanier[i];
@@ -76,17 +77,21 @@ $(function(){
   }
 
   //ajouterAuPanier(5, "Titant X geforce 1080", "299.19");
-  //idProduit, titreProduit, prixproduit
-  var ajouterAuPanier = function(idProduit, titreProduit, prixproduit){
-    if(  referenceExist(idProduit) !== false ){
-      var newQt = Number(referenceExist(idProduit)) + 1;
-      modifierQTProduitPanier(idProduit, newQt);
+  window.ajouterAuPanier = function(idProduit, titreProduit, prixproduit){
+    if(  window.referenceExist(idProduit) !== false ){
+      var newQt = Number(window.referenceExist(idProduit)) + 1;
+      window.modifierQTProduitPanier(idProduit, newQt);
     }else{
       window.tableauPanier.push([idProduit, titreProduit, 1, prixproduit])
     }
-
+    paintPanier();
   }
-  //ajouterAuPanier(5, "Titant X geforce 1080", "299.19");
+
+
+
+
+
+
 
 
 
@@ -99,4 +104,5 @@ $(function(){
     delete window.tableauPanier[idPanierDelete];
     paintPanier();
   })
+
 });
