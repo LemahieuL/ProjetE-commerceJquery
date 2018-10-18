@@ -783,7 +783,14 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Votre Panier: <br />Il y a <span id="nbrTotalProduitPanier">0</span> produits pour un total de <span id="priceTotalProduitPanier">0</span>€</h5>
+          <h5 class="modal-title" id="exampleModalLabel">
+            <div class="panier-vide">
+              Votre panier est vide
+            </div>
+            <div class="panier-vide-non-vide">
+              Votre Panier: <br />Il y a <span id="nbrTotalProduitPanier">0</span> produits pour un total de <span id="priceTotalProduitPanier">0</span>€
+            </div>
+          </h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -795,7 +802,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-          <button type="button" class="btn btn-primary">Commander</button>
+          <button type="button" class="btn btn-primary" id="commanderPanier" disabled>Commander</button>
         </div>
       </div>
     </div>
