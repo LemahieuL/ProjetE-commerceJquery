@@ -80,9 +80,9 @@ $(function(){
   var ajouterAuPanier = function(idProduit, titreProduit, prixproduit){
     if(  referenceExist(idProduit) !== false ){
       var newQt = Number(referenceExist(idProduit)) + 1;
-      modifierQTProduitPanier(5, newQt);
+      modifierQTProduitPanier(idProduit, newQt);
     }else{
-      window.tableauPanier.push([5, "Titant X geforce 1080", 1, "299.19"])
+      window.tableauPanier.push([idProduit, titreProdui, 1, prixproduit])
     }
 
   }
