@@ -82,7 +82,7 @@ $(function(){
       var newQt = Number(referenceExist(idProduit)) + 1;
       modifierQTProduitPanier(idProduit, newQt);
     }else{
-      window.tableauPanier.push([idProduit, titreProdui, 1, prixproduit])
+      window.tableauPanier.push([idProduit, titreProduit, 1, prixproduit])
     }
 
   }
