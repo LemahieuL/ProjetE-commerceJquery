@@ -130,8 +130,8 @@ $(function(){
 
   $(".modal-body").on("click", ".buttonMoinQtPanier",function(){
     var newVal = (Number($(this).next().val())-1)
-    if(newVal < 0){
-      newVal = 0;
+    if(newVal < 1){
+      newVal = 1;
     }
     if(newVal > 99){
       newVal = 99;
@@ -142,8 +142,8 @@ $(function(){
 
   $(".modal-body").on("click", ".buttonPlusQtPanier",function(){
     var newVal = (Number($(this).prev().val())+1)
-    if(newVal < 0){
-      newVal = 0;
+    if(newVal < 1){
+      newVal = 1;
     }
     if(newVal > 99){
       newVal = 99;
