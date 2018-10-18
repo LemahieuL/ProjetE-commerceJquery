@@ -20,12 +20,12 @@ $(function(){
       <div class="col-1 idProduit">
         ${idProduit}
       </div>
-      <div class="col-6" style="white-space: nowrap;overflow:hidden;">
+      <div class="col-5 col-lg-6" style="white-space: nowrap;overflow:visible;">
         ${title}
       </div>
-      <div class="col-2" style="white-space: nowrap;min-width:72px;padding:0;">
+      <div class="col-8 col-lg-2 text-right" style="white-space: nowrap;min-width:72px;padding:0;">
         <input type="button" class="buttonMoinQtPanier" value="<" style="display:inline;width:15px;padding:0;" />
-        <input type="number" min="1" max="99" name="quantite" value="${qt}" style="width:40px;" />
+        <input type="number" min="1" max="99" name="quantite" value="${qt}" style="width:40px;text-align:center;" />
         <input type="button" class="buttonPlusQtPanier" value=">" style="display:inline;width:15px;padding:0;" />
       </div>
       <div class="col-3 text-right">
