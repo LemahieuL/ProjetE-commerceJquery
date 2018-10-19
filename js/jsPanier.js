@@ -4,10 +4,10 @@ var PrixTotalPanier = 0;
 var quantiteProduitPanier;
 window.tableauPanier = [
   [1, "gtx 960  GAMER", 2, "48.45"],
-  // [2, "Titant X geforce 1080", 2, "299.19"],
-  // [3, "MSI GeForce GTX 1050 Ti Gaming X - 4 Go", 2, "299.19"],
-  // [4, "MSI GeForce GTX 1060 6GT OC V1 - 6 Go", 2, "299.19"],
-  // [5, "Titant X geforce 1080", 2, "299.19"],
+  [2, "Titant X geforce 1080", 2, "299.19"],
+  [3, "MSI GeForce GTX 1050 Ti Gaming X - 4 Go", 2, "299.19"],
+  [4, "MSI GeForce GTX 1060 6GT OC V1 - 6 Go", 2, "299.19"],
+  [5, "Titant X geforce 1080", 2, "299.19"],
 ]
 
 
