@@ -12,3 +12,10 @@
 i {
   cursor: pointer;
 }
+
+/*  Media */
+@media only screen and (max-width: 990px) {
+  .text-center-resp {
+    text-align: center;
+  }
+}
