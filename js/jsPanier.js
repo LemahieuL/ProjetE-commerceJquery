@@ -2,13 +2,7 @@
 var tableauProduits = [];
 var PrixTotalPanier = 0;
 var quantiteProduitPanier;
-window.tableauPanier = [
-  [1, "gtx 960  GAMER", 1, "10.00"],
-  [2, "Titant X geforce 1080", 1, "10.00"],
-  [3, "MSI GeForce GTX 1050 Ti Gaming X - 4 Go", 1, "10.00"],
-  [4, "MSI GeForce GTX 1060 6GT OC V1 - 6 Go", 1, "10.00"],
-  [5, "Titant X geforce 1080", 1, "10.00"],
-]
+window.tableauPanier = [];
 
 
 $(function(){
