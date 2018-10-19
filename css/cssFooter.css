@@ -1,38 +1,84 @@
+.footer{
+  border: 5px solid;
+  background-color: black;
+}
+.Services1{
+height: 50px;
+width: auto;
+border: solid 5px black;
+color: white;
+}
 .Services{
-background-color: green;
+
 }
 .ServicesListe{
-  display: flex;
+  display: inline-flex;
   list-style: none;
-  text-align: center;
+  flex-wrap: wrap;
 }
 .list__item{
+  display: flex;
   text-align: center;
 }
-footer img{
+.icon{
+	background:#069;
+    vertical-align: middle;
+    line-height: 1.2em;
+    height: 55px;
+    width: 55px;
+    border-radius: 10px
+}
+.icon img{
   height: 37px;
   width: 48;
 }
 .label{
-  width:300px;
-  	height:100px;
-  	background:#069;
-  	-webkit-transform:skew(30deg);
-  	-moz-transform:skew(30deg);
-  	-o-transform:skew(30deg);
-  	tranform:skew(30deg);
+    /* text-align: center; */
+    line-height: 20px;
+
 }
 #Plus{
-  background-color: green;
+  background-color: blue;
 }
+#Plus li{
+  list-style: none;
+}
+#divers{
+  /* background-color: yellow; */
+}
+
 .Paiement, .Partenaire{
 box-sizing: border-box;
 background-color: grey;
 padding-bottom: 20px;
+height: 80px;
+margin-top: 10px;
+margin-bottom: 10px;
 }
+.Partenaire img{
+  text-align: center;
+}
+.moyenPaiement{
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-left: 70px;
+}
+.moyenPaiement li{
+  text-align: center;
+  margin-right: 80px;
+}
+
 .contact, .networks{
   box-sizing: border-box;
   background-color: grey;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+#button{
+  display: block;
+  margin: auto;
 }
 .socialList{
   display: flex;
@@ -43,4 +89,8 @@ padding-bottom: 20px;
 .socialList li{
   text-align: center;
   margin-right: 80px;
+}
+.coordonnée{
+  background-color: black;
+  color:white;
 }
