@@ -1,0 +1,46 @@
+.Services{
+background-color: green;
+}
+.ServicesListe{
+  display: flex;
+  list-style: none;
+  text-align: center;
+}
+.list__item{
+  text-align: center;
+}
+footer img{
+  height: 37px;
+  width: 48;
+}
+.label{
+  width:300px;
+  	height:100px;
+  	background:#069;
+  	-webkit-transform:skew(30deg);
+  	-moz-transform:skew(30deg);
+  	-o-transform:skew(30deg);
+  	tranform:skew(30deg);
+}
+#Plus{
+  background-color: green;
+}
+.Paiement, .Partenaire{
+box-sizing: border-box;
+background-color: grey;
+padding-bottom: 20px;
+}
+.contact, .networks{
+  box-sizing: border-box;
+  background-color: grey;
+}
+.socialList{
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-left: 70px;
+}
+.socialList li{
+  text-align: center;
+  margin-right: 80px;
+}

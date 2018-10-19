@@ -2,13 +2,7 @@
 var tableauProduits = [];
 var PrixTotalPanier = 0;
 var quantiteProduitPanier;
-window.tableauPanier = [
-  [1, "gtx 960  GAMER", 1, "10.00"],
-  // [2, "Titant X geforce 1080", 1, "10.00"],
-  // [3, "MSI GeForce GTX 1050 Ti Gaming X - 4 Go", 1, "10.00"],
-  // [4, "MSI GeForce GTX 1060 6GT OC V1 - 6 Go", 1, "10.00"],
-  // [5, "Titant X geforce 1080", 1, "10.00"],
-]
+window.tableauPanier = [];
 
 
 $(function(){
@@ -49,6 +43,13 @@ $(function(){
       window.PrixTotalPanier  += Number(element[3])*Number(element[2]);
       $("#nbrTotalProduitPanier").text(++countIndex);
     })
+
+    if( countIndex <= 1 ){
+      $(".pluriel").css("display", "none")
+    }else{
+      $(".pluriel").css("display", "inline")
+    }
+
     if( countIndex > 0){
       $("#commanderPanier").prop('disabled', false);
       $(".panier-vide-non-vide").css("display", "block");
@@ -125,7 +126,7 @@ $(function(){
     var tabInputQt = $("input[name=quantite]");
     var n = $("input[name=quantite]").length
     for(var i=0; i<n; i++){
-      var indicePanier = $(tabInputQt[i]).parent().parent().attr("data-id-panier")
+      var indicePanier = $(tabInputQt[i]).parent().parent().attr("data-id-panier");
       window.tableauPanier[indicePanier][2] = tabInputQt[i].value;
     }
     paintPanier();
