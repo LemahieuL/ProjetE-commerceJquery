@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/cssStyle.css" />
   <link rel="stylesheet" href="css/cssNavbarleft.css" />
@@ -75,10 +76,159 @@
       </div>
     </div>
   </div>
+  <!--****************************************** DEBUT fOOTER*******************************************************************************-->
   <footer class="container-fluid">
-    footer
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- ***************************************LISTE DES SERVICES *******************************************************************************-->
+    <div class="container-fluid ">
+      <div class="Services">
+        <ul class= "ServicesListe">
+          <li class="col list__item">
+            <div class="icon">
+              <img src="image/icon-creditcard.png" alt="">
+            </div>
+            <div class="label">Débit à <span>l'éxpédition</span></div>
+          </li>
+
+          <li class="col c-list__item">
+            <div class="icon">
+              <img src="image/icon-truck.png" alt="">
+            </div>
+            <div class="label">livraison <span>Express</span></div>
+          </li>
+
+          <li class="col list__item">
+            <div class="icon">
+              <img src="image/icon-euro.png" alt="">
+            </div>
+            <div class="label">facilité de <span>Paiement</span></div>
+          </li>
+
+          <li class="col list__item">
+            <div class="icon">
+              <img src="image/handshake-solid.svg" alt="">
+            </div>
+            <div class="label">Elu <span>Service client de l'année 2018</span></div>
+          </li>
+
+          <li class="col list__item">
+            <div class="c-item__icon">
+              <img src="image/smile-regular.svg" alt="">
+            </div>
+            <div class="label">Tous nos articles sont <span>Garantie 5 Ans</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+<!-- ****************************************************FIN LISTE DE SERVICE ********************************************************************************-->
+
+<!-- *****************************************DIV CONTENANT PARTENAIRES ET MOYEN DE PAIEMENT*********************************************************************-->
+<div class="container-Fluid">
+    <div class="row" id="Plus">
+        <div class="col">
+            <div class="Paiement">
+                <span class="PaiementTitle">Moyens de paiement</span>
+                <ul>
+    <ul>
+      <li></li>
+      <li></li>
+    </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="col">
+            <div class="Partenaire">
+                <span class="PartenaireTitle">Livraison</span><br />
+                 <img src="image/sprite-footer-carrier.6964fa94.png" alt="">
+            </div>
+        </div>
+    </div>
+  </div>
+<!--********************************************************* FIN DIV CONTENANT PARTENAIRES ET MOYEN DE PAIEMENT*****************************************-->
+
+<!--****************************************DEBUT DE LIEN ACCÉDANT AU MENU/NAVBAR*******************************************************************-->
+<div class="container-fluid" >
+  <div class="row" id="Plus">
+    <div class="col-12 col-md c-navigation__block">
+      <span class="c-block__title">Materiel.net</span>
+      <ul>
+        <li><a href="https://www.materiel.net/n4605/ ">Qui sommes-nous ?</a></li>
+        <li><a href="https://www.materiel.net/n4612/">Nos services</a></li>
+        <li><a href="https://www.materiel.net/magasins/">Les magasins Materiel.net</a></li>
+        <li><a href="https://www.materiel.net/faq-informations/q165-nous-contacter/">Contactez-nous</a></li>
+      </ul>
+    </div>
+
+    <div class="col-12 col-md c-navigation__block">
+      <span class="c-block__title">Materiel.net &amp; vous</span>
+      <ul>
+        <li><a href="https://www.materiel.net/faq-informations/q163-environnement/">Notre démarche écologique</a></li>
+        <li><a href="https://www.materiel.net/faq-informations/q164-materiel-net-recrute/">Materiel.net recrute</a></li>
+        <li><a href="https://affiliation.materiel.net/affiliates/index.php">Notre programme d'affiliation</a></li>
+      </ul>
+    </div>
+    <div class="col-12 col-md c-navigation__block">
+      <span class="c-block__title">Guides &amp; SAV</span>
+      <ul>
+        <li><a href="https://www.materiel.net/guide-achat/">Guides d'achats et tutoriels</a></li>
+        <li><a href="https://www.materiel.net/faq-informations/">Foire Aux Questions</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <!--**************************************************************DEBUT DE LIEN ACCÉDANT AU MENU/NAVBAR**************************************************-->
+<!--******************************************************************DIV CONTACT/RESEAUX SOCIAUX****************************************************** -->
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col ">
+      <div class="contact">
+        <span class="ContactTitle">Une équipe d'experts à votre service</span><br/>
+        <button type="button" name="button" id="button">Contactez-nous</button>
+        <form>
+          <div class="">
+            <input id="lastName" type="text" class="validate">
+            <label for="lastName">Nom</label>
+          </div>
+
+          <div class="">
+            <input id="firstName" type="text" class="validate">
+            <label for="firstName">Prénom</label>
+          </div>
+
+          <div class="">
+            <input id="mail" type="text" class="validate">
+            <label for="mail">Adresse mail</label>
+          </div>
+
+          <div class="">
+            <input id="phoneNumber" type="text" class="validate">
+            <label for="phoneNumber">Numéro de téléphone</label>
+          </div>
+          <button type="submit" name="action" id="submit">Envoyer</button>
+          </form>
+        </div>
+    </div>
+
+    <div class="col ">
+      <div class="networks">
+        <span class="NetworkTitle">Materiel.net sur les réseaux sociaux</span>
+        <ul class="socialList">
+          <li><a href="https://www.facebook.com"><i class="fab fa-facebook fa-2x"></i></a></li>
+          <li><a href="https://www.twitter.com/?lang=fr"><i class="fab fa-twitter fa-2x"></i></a></li>
+          <li><a href="https://www.youtube.com"><i class="fab fa-youtube fa-2x"></i></a></li>
+          <li><a href="https://www.instagram.com"><i class="fab fa-instagram fa-2x"></i></a></li>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!--******************************************************************FIN DIV CONTACT/RESEAUX SOCIAUX****************************************************** -->
+
+
+
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script src="js/jsPanier.js"></script>
