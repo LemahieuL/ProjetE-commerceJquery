@@ -6,15 +6,20 @@ $(function() {
       var array = ["processor", "motherboard", "graphics-card", "ram"];
       for (var i = 0; i < 4; i++) {
         if ($("[name='" + array[i] + "']").is(":checked")) {
-          console.log(array[i]);
           $(".category[data-category='" + array[i] + "']").show();
         } else {
-          console.log(array[i]);
           $(".category[data-category='" + array[i] + "']").hide();
         }
       }
     } else {
-      $(".category[data-category='" + catId +"']").hide();
+      var array = ["processor", "motherboard", "graphics-card", "ram"];
+      for (var i = 0; i < 4; i++) {
+        if ($("[name='" + array[i] + "']").not(":checked")) {
+          $(".category[data-category='" + array[i] + "']").show();
+        } else {
+          $(".category[data-category='" + array[i] + "']").hide();
+        }
+      }
     }
   });
 });

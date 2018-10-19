@@ -1,14 +1,23 @@
 $(function () {
 
-window.amout = function(this) {
-  var number = Number($(this).attr("data-id-product"));
-  var amount = referenceExist(number);
-  $(this).parent().parent().find(".amount").text(amount);
-}
+  window.counter = function(fab) {
+    var number = Number($(fab).attr("data-id-product"));
+    var amount = referenceExist(number);
+    $(fab).parent().parent().find(".amount").text(amount);
+  }
+
   $("i").click(function() {
-    amout(this);
+    counter(this);
   });
 
-  setInterval(amout(this), 200);
+  $(".modal-body").on("click", ".buttonPlusQtPanier, .buttonMoinQtPanier",function() {
+    var number = Number($(this).parent().parent().find(".idProduit").text());
+    var amount = referenceExist(number);
+    $("i[data-id-product=" + number + "]").parent().parent().find(".amount").text(amount);
+  });
 
+  $(".modal-body").on("click", ".supprimerProduit",function() {
+    var number = Number($(this).parent().parent().parent().find(".idProduit").text());
+    $("i[data-id-product=" + number + "]").parent().parent().find(".amount").text("");
+  });
 });
