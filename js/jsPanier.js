@@ -182,10 +182,6 @@ $(function(){
     if(newVal < 1){
       newVal = 1; //on force cette meme valeur a 1 pour limité a 1 la quantité du produit
     }
-    // Si la valeur modifier par le client est supperieur a 99,
-    if(newVal > 99){
-      newVal = 99;//on force cette meme valeur a 99 pour limité a 99 la quantité du produit
-    }
     // change la valeur quantitee par la nouvelle valeur qui a ete augmenter de +1 si
     // sa reste ente 1 et 99 sinon la nouvelle valeur correspond a la limite ci dessus
     $(this).next().val( newVal  )
@@ -195,10 +191,6 @@ $(function(){
   // lorsqu'un clique est fait sur le bouton plus (signe supperieur) de la quantité du panier
   $(".modal-body").on("click", ".buttonPlusQtPanier",function(){
     var newVal = (Number($(this).prev().val())+1)// recuperation de la valeur -1 du champ suivant qui est la quantité dans le html du panier
-    // Si la valeur modifier par le client est inferieur a 1,
-    if(newVal < 1){
-      newVal = 1;//on force cette meme valeur a 1 pour limité a 1 la quantité du produit
-    }
     // Si la valeur modifier par le client est supperieur a 99,
     if(newVal > 99){
       newVal = 99;//on force cette meme valeur a 99 pour limité a 99 la quantité du produit
