@@ -3,46 +3,132 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <link rel="stylesheet" href="css/cssStyle.css" />
   <link rel="stylesheet" href="css/cssPanier.css" />
   <link rel="stylesheet" href="css/navbarTopFixed.css" />
+  <link rel="stylesheet" href="css/carousel.css" />
+  <link rel="stylesheet" href="css/topVente.css" />
   <link rel="stylesheet" href="css/cssNavbarleft.css" />
   <link rel="stylesheet" href="css/cssComposant.css" />
   <link rel="stylesheet" href="css/cssFooter.css" />
   <title>SIte E-commerce de La team Luc</title>
 </head>
 <body>
-  <header class="container-fluid">
-    <nav class="navbar fixed-top navbar-expand-md navbar-dark ">
-      <a class="navbar-brand" href="#">Site team Luc</a>
-      <button class="navbar-toggler btn btn-outline-danger" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarNavDropdown">
-        <ul class="navbar-nav text-nowrap">
-          <li class="nav-item col-12 col-md-2 text-left text-md-center">
-            <a class="nav-link" href="#">Processeur</a>
-          </li>
-          <li class="nav-item col-12  col-md-2 col-lg-3 text-left text-md-center">
-            <a class="nav-link" href="#">Carte Mère</a>
-          </li>
-          <li class="nav-item col-12 col-md-3 text-left text-md-center">
-            <a class="nav-link text-nowrap" href="#">Carte graphique</a>
-          </li>
-          <li class="nav-item col-12 col-md-2 text-left text-md-center">
-            <a class="nav-link" href="#" title="PC/RAM">Mémoire</a>
-          </li>
-          <li class="nav-item col-12 col-md-2 align-self-center text-right">
-            <a class=""><i class="fas fa-2x fa-cart-arrow-down" data-toggle="modal" data-target="#exampleModal"></i></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
 
+  <header class="container-fluid">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+        <li data-target="#carouselExampleSlidesOnly" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="image/carousel/1.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="image/carousel/1.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="image/carousel/1.jpg" alt="Third slide">
+        </div>
+      </div>
+    </div>
   </header>
+
+  <nav class="navbar sticky-top navbar-expand-md navbar-dark">
+    <a class="navbar-brand" href="#"><img src="image/teamLFVF.png" alt="Logo du site web"></a>
+    <button class="navbar-toggler btn btn-outline-danger" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+      <ul class="navbar-nav text-nowrap">
+        <li class="nav-item col-12 col-md-2 text-left text-md-center">
+          <a class="nav-link" href="#">Processeur</a>
+        </li>
+        <li class="nav-item col-12  col-md-2 col-lg-3 text-left text-md-center">
+          <a class="nav-link" href="#">Carte Mère</a>
+        </li>
+        <li class="nav-item col-12 col-md-3 text-left text-md-center">
+          <a class="nav-link text-nowrap" href="#">Carte graphique</a>
+        </li>
+        <li class="nav-item col-12 col-md-2 text-left text-md-center">
+          <a class="nav-link" href="#" title="PC/RAM">Mémoire</a>
+        </li>
+        <li class="nav-item col-12 col-md-2 align-self-center text-right float-right">
+          <a class=""><i class="fas fa-2x fa-cart-arrow-down" data-toggle="modal" data-target="#exampleModal"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
   <main class="container-fluid">
+    <div class="rom">
+      <div class="col-12" id="top-des-ventes">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="title-separator">TOP DES VENTES <span class="separator-red"></span></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="image/1.png" alt="Card image cap">
+              <div class="card-body text-center">
+                <h5 class="card-title">MSI GeForce GTX 1060 Gaming X - 6 Go</h5>
+                <p class="font-weight-bold">339€<span class="text-category-up">95</span></p>
+                <i class="fas fa-2x fa-cart-arrow-down"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="image/2.png" alt="Card image cap">
+              <div class="card-body text-center">
+                <h5 class="card-title">Corsair Vengeance LPX Black DDR4 2 x 8 Go 3000 MHz CAS 15</h5>
+                <p class="font-weight-bold">339€<span class="text-category-up">95</span></p>
+                <i class="fas fa-2x fa-cart-arrow-down"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="image/3.png" alt="Card image cap">
+              <div class="card-body text-center">
+                <h5 class="card-title">MSI B250I Gaming Pro AC</h5>
+                <p class="font-weight-bold">339€<span class="text-category-up">95</span></p>
+                <i class="fas fa-2x fa-cart-arrow-down"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="image/4.png" alt="Card image cap">
+              <div class="card-body text-center">
+                <h5 class="card-title">Intel Core i5 7600K</h5>
+                <p class="font-weight-bold">339€<span class="text-category-up">95</span></p>
+                <i class="fas fa-2x fa-cart-arrow-down"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row promo">
+      <div class="col-12 text-center">
+        <img src="image/Promo.png" alt="pub promo">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <h1 class="title-separator">NOS PRODUITS <span class="separator-red"></span></h1>
+      </div>
+    </div>
     <div class="row">
       <div class="col-12 col-md-4 col-lg-3 navbar-left">
         <!--Nav bar left luc -->
