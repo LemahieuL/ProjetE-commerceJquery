@@ -11,6 +11,8 @@ main{
 
 .navbar .collapse{
   background-color: #f46036;
+  background-color: #37d803;
+  text-shadow: 0 0 11px #000;
 }
 .link-color2{
   background-color: #000;
@@ -59,6 +61,11 @@ main{
       background: #828282;
       background: #000;
   }
+  .navbar-toggler{
+    background-color: #909090;
+    background-color: #f46033;
+    background-color: #37d803;
+  }
   .navbar-light .navbar-brand {
       color: #FFF;
   }
@@ -75,8 +82,5 @@ main{
   .navbar-nav.col-lg-12{
     padding-right: 0;
   }
-  .navbar-toggler{
-    background-color: #909090;
-    background-color: #f46033;;
-  }
+
 }
