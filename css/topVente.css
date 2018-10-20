@@ -5,8 +5,8 @@
     background-color: #222;
     border: 2px solid #ad0101;
     color: #bbae03;
-    margin: auto;
     padding-bottom: 40px;
+    width: 100%;
 }
 #top-des-ventes .card p{
   color: red;
@@ -30,6 +30,14 @@
     font-size: 1rem;
 }
 .promo img{
-  width: 85%;
-  height: 85%;
+  /* width: 85%; */
+  /* height: 85%; */
 }
+
+/* @media screen and (max-width: 640px) {
+  #top-des-ventes .card {
+      padding-bottom: 40px;
+      width: 71%;
+      margin-top: 40px;
+  }
+} */

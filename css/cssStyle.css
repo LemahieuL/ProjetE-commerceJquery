@@ -9,4 +9,6 @@ body{
 }
 main{
   padding-top: 60px;
+  max-width: 1366px;
+  margin: auto;
 }
