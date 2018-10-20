@@ -44,7 +44,7 @@
   </header>
   <main class="container-fluid">
     <div class="row">
-      <div class="col-12 col-md-3 navbar-left">
+      <div class="col-12 col-md-4 col-lg-3 navbar-left">
         <!--Nav bar left luc -->
         <div class="row">
           <div class="col-12">
@@ -73,10 +73,30 @@
               </div>
             </div>
           </div>
+          <div class="col-12">
+            <form>
+              <input type="text" id="inputSearchOfProduct" placeholder="Recherche" name="search"><button type="submit" id="btnSearchOfProduct"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+          <div class="col-12">
+            <form style="display:inline-block;min-width:10px;">
+              <input type="text" id="inputSearchPriceMinProduct" placeholder="Min" name="search">
+              <input type="text" id="inputSearchPriceMaxProduct" placeholder="Max" name="search"><button type="submit" id="btnSearchPriceProduct"><i class="fas fa-euro-sign"></i></button>
+            </form>
+          </div>
+          <div class="col-12">
+            <form>
+              <select name="triProduit" id="triProduit">
+                <option value="">Aucun</option>
+                <option value="prixCroissantPlus">Prix Coissant</option>
+                <option value="prixCroissantMoin">Prix Décroissant</option>
+              </select>
+            </form>
+          </div>
         </div>
 
       </div>
-      <div class="col-12 col-md-9 text-center-resp">
+      <div class="col-12 col-md-8 col-lg-9 text-center-resp product">
         <!-- Category Graphic Card -->
         <!-- Product 1 -->
         <div class="row category" data-category="graphics-card">
@@ -532,7 +552,7 @@
           <div class="col-lg-2 col-sm-12 text-center-resp">
             <div class="row">
               <div class="col-12">
-                <p class="font-weight-bold">171<span class="text-category-up">95</span></p>
+                <p class="font-weight-bold">171€<span class="text-category-up">95</span></p>
               </div>
             </div>
             <div class="row">

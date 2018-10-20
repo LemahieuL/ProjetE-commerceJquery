@@ -1,6 +1,6 @@
-$("form").hide();
+$("footer form").hide();
 $("#button").click(function(){
-  $("form").show();
+  $("footer form").show();
 });
 
 $("#form").ready(function() {

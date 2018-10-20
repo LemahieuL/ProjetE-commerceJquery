@@ -22,4 +22,98 @@ $(function() {
       }
     }
   });
+
+  $("#btnSearchOfProduct").click(function(){
+    var affichage = []; // memorise les balises qui corespondent a la recherche
+    var val = $("#inputSearchOfProduct").val(); // recupere la valeur de recherche taper par le visiteur
+    val = val.toLowerCase(); // rend la recherche insensible a la majuscule partie 1 sur 2.
+    // RECHERCHE PAR TITRE PRODUIT
+    var tabCatH1 = $(".category h1") // liste tout les titres de produits
+    var n = tabCatH1.length; // compte le nombre de titre produit pour la boucle for
+    for(var i=0; i<n; i++){ // pour chaque titre de produit
+      var text = tabCatH1[i].outerText; // on recuperer le contenu text du titre
+      text = text.toLowerCase();// rend la recherche insensible a la majuscule partie 2 sur 2.
+      if(text.indexOf(val) != -1){ // si une partie du titre corespond a la recherche
+        var baliseH1 = $(".category h1")[i]; // on met la balise en memoire
+        // recuperation de la balise categorie du titre recherche
+        var parentCategory =  $(baliseH1).parent().parent().parent().parent() ;
+        // ajout (a la liste de resultats de recherche)de la balise que l'ont vient de recuperer
+        affichage.push(parentCategory);
+      }
+    }//for
+
+    // pour n'afficher que les balises corespondant a la recherche ont cache tout les produits
+    $(".category").hide();
+    // compte le nombre de resultat de la recherche
+    n = affichage.length;
+    for(var i=0; i<n; i++){ // pour chaque resultat ont obtient une balise javascript
+      $(affichage[i]).show(); // jquery affiche cette balise
+    }
+    return false; // fin de la fonction
+  });
+
+  $("#btnSearchPriceProduct").click(function(){
+    var affichage = []; // memorise les balises qui corespondent a la recherche
+
+    var valMin = Number($("#inputSearchPriceMinProduct").val());
+    var valMax = Number($("#inputSearchPriceMaxProduct").val());
+
+    var tabCatPrice = $(".font-weight-bold");
+    //console.log(tabCatPrice);
+    var n = tabCatPrice.length;
+    for(var i=0; i<n; i++){ // pour chaque titre de produit
+      var price = $(tabCatPrice[i]).text()
+      price = price.replace("€", ".");
+      price = Number(price);
+      if(  price >= valMin && price <= valMax  && valMin <= valMax ){
+        var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent();
+        affichage.push(parentCategory);
+      }else if( price >= valMin && valMax == 0 ){
+        var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent();
+        affichage.push(parentCategory);
+      }else if( price <= valMax && valMin == 0 ){
+        var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent();
+        affichage.push(parentCategory);
+      }
+    }//for
+    // pour n'afficher que les balises corespondant a la recherche ont cache tout les produits
+    $(".category").hide();
+    // compte le nombre de resultat de la recherche
+    n = affichage.length;
+    for(var i=0; i<n; i++){ // pour chaque resultat ont obtient une balise javascript
+      $(affichage[i]).show(); // jquery affiche cette balise
+    }
+    return false;
+  });
+
+  $("#triProduit").change(function(){
+    //console.log(this.value);
+    var tabCatPrice = $(".font-weight-bold");
+    var n = tabCatPrice.length;
+    var   affichage = [];
+    var price;
+    for(var i=0; i<n; i++){
+      var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent();
+
+      price = $(tabCatPrice[i]).text()
+      price = price.replace("€", ".");
+      price = Number(price);
+
+      affichage.push([parentCategory, price]);
+    }
+    //console.log(affichage);
+    affichage.sort(function(a, b) { return a[1] - b[1]; });
+    if( this.value != "prixCroissantPlus"){
+      affichage.reverse();
+    }
+
+    $(".product").html("");
+    n = affichage.length;
+    for(var i=0; i<n; i++){
+      $(".product").append(affichage[i][0]);
+    }
+    //  console.log(affichage[0][0]);
+
+  });
+
 });

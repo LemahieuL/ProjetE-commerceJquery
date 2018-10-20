@@ -8,3 +8,7 @@
 .navbar-left.fixed-top {
     top: 94px;
 }
+#inputSearchPriceMinProduct,
+#inputSearchPriceMaxProduct{
+  width: 50px;
+}
