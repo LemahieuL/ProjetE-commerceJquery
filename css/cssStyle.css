@@ -1,86 +1,12 @@
 /*Partie NavBar Luc*/
-i.fas.fa-cart-arrow-down{
-  font-size: 50px;
-  text-align: right;
-  margin-right: 20px;
-  padding: 10px;
+
+body{
+  /* font-family: 'Nunito Sans', sans-serif; */
+  letter-spacing: 1px;
+  background: #222;
+  background: linear-gradient(to right, #000000 0%,#444444 47%,#000000 100%);
+  background: linear-gradient(to right, #0a0a0a 0%,#232323 47%,#0a0a0a 100%);
 }
 main{
   padding-top: 60px;
-}
-
-.navbar .collapse{
-  background-color: #f46036;
-  background-color: #37d803;
-  text-shadow: 0 0 11px #000;
-}
-.link-color2{
-  background-color: #000;
-  transform:skewX(40deg);
-}
-.link-color2 a.nav-link{
-  transform:skewX(-40deg);
-}
-.navbar-light .navbar-nav .nav-link:hover {
-    color: rgb(255, 255, 255);
-}
-.navbar-light .navbar-nav .nav-link {
-    color: #FFF;
-    text-transform: uppercase;
-    padding-top: 1.5rem;
-}
-
-.navbar-collapse {
-    align-items: inherit;
-}
-
-.navbar {
-    padding: 0 5px;
-    margin-right: 0;
-    margin-left: 0;
-    background: linear-gradient(to right, #000000 51%,#f46036 51%);
-    box-shadow: 0 0 10px 1px black;
-    line-height: 0;
-}
-.navbar-light .navbar-brand {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.75rem;
-}
-
-
-
-
-.fa-cart-arrow-down:before {
-    color: white;
-}
-
-
-@media screen and (max-width: 990px) {
-  .navbar {
-      background: #FFF;
-      background: #828282;
-      background: #000;
-  }
-  .navbar-toggler{
-    background-color: #909090;
-    background-color: #f46033;
-    background-color: #37d803;
-  }
-  .navbar-light .navbar-brand {
-      color: #FFF;
-  }
-  .link-color2{
-    background-color: #000;
-    transform:skewX(0deg);
-  }
-  .link-color2 a.nav-link{
-    transform:skewX(0deg);
-  }
-  .navbar-light .navbar-nav .nav-link {
-      padding: 1.5rem;
-  }
-  .navbar-nav.col-lg-12{
-    padding-right: 0;
-  }
-
 }
