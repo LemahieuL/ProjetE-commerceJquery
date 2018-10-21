@@ -2,7 +2,10 @@
 var tableauProduits = [];
 var PrixTotalPanier = 0;
 var quantiteProduitPanier;
-window.tableauPanier = [];
+window.tableauPanier = [
+  [22, "MSI GeForce GTX 1070 Gaming X - 8 Go", 2, 514.96],
+  [51, "MSI GeForce GTX 1060 Gaming X - 8 Go", 2, 339.95]
+];
 
 
 $(function(){
@@ -12,21 +15,24 @@ $(function(){
   // cette fonction utilise uniquement la partie visible (HTML) et varie en fonction
   // des données qui lui sont indiqué en paramètre de la fonction
   window.addProduitDOMPanier = function(index, idProduit, title, qt, price){
+
+
+    var price2 = String(price).split(".");
     var modalProduitElement = `<div class="row produitPanier" data-id-panier="${index}">
       <div class="col-1 idProduit">
         ${idProduit}
       </div>
-      <div class="col-5 col-lg-6" style="white-space: nowrap;overflow:visible;">
+      <div class="col-5 col-lg-6 titre" style="white-space: nowrap;overflow:visible;">
         ${title}
       </div>
-      <div class="col-8 col-lg-2 text-right" style="white-space: nowrap;min-width:72px;padding:0;">
+      <div class="col-8 col-lg-8 col-xl-8 text-right" style="white-space: nowrap;min-width:72px;padding:0;">
         <input type="button" class="buttonMoinQtPanier" value="<" style="display:inline;width:15px;padding:0;" />
         <input type="number" min="1" max="99" name="quantite" value="${qt}" style="width:40px;text-align:center;" />
-        <input type="button" class="buttonPlusQtPanier" value=">" style="display:inline;width:15px;padding:0;" />
+        <input type="button" class="buttonPlusQtPanier" value="> " style="display:inline;width:15px;padding:0;" />
       </div>
       <div class="col-3 text-right">
-        <div class="">
-          ${price}€
+        <div class="price">
+          ${price2[0]}€<span class="text-category-up">${price2[1]}</span>
         </div>
         <div class="">
           <a href="#" class="supprimerProduit">Supprimer</a>
