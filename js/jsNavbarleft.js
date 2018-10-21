@@ -1,5 +1,47 @@
 $(function() {
 
+  // Affiche seulement les composants cocher (version codeurh24)
+  // $("[type='checkbox']").change(function(){
+  //   console.log(".");
+  //   console.log(".");
+  //   var checkboxs = $("input:checked");
+  //   var n = checkboxs.length;
+  //   var displays = [];
+  //   for(var i=0; i<n; i++){
+  //     displays.push(checkboxs[i].name);
+  //     console.log( checkboxs[i].name );
+  //   }
+  //   n = displays.length;
+  //   console.log(n)
+  //
+  //   if( n == 0){
+  //     $(".category[data-category]").show();
+  //   }else{
+  //     $(".category[data-category]").hide();
+  //   }
+  //
+  //
+  //   for(var i=0; i<n; i++){
+  //     if(displays[i] == "processor"){
+  //       console.log("processor")
+  //       $(".category[data-category=processor]").show();
+  //     }
+  //     if(displays[i] == "motherboard"){
+  //       console.log("motherboard")
+  //       $(".category[data-category=motherboard]").show();
+  //     }
+  //     if(displays[i] == "graphics-card"){
+  //       console.log("graphics-card")
+  //       $(".category[data-category=graphics-card]").show();
+  //     }
+  //     if(displays[i] == "ram"){
+  //       console.log("ram")
+  //       $(".category[data-category=ram]").show();
+  //     }
+  //   }
+  //   return false;
+  // });
+
   $("[type='checkbox']").change(function() {
     var catId = $(this).data("category");
     if ($(this).is(":checked")) {
@@ -61,18 +103,14 @@ $(function() {
     var tabCatPrice = $(".font-weight-bold");
     //console.log(tabCatPrice);
     var n = tabCatPrice.length;
+
     for(var i=0; i<n; i++){ // pour chaque titre de produit
       var price = $(tabCatPrice[i]).text()
       price = price.replace("€", ".");
       price = Number(price);
       if(  price >= valMin && price <= valMax  && valMin <= valMax ){
-        var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent();
-        affichage.push(parentCategory);
-      }else if( price >= valMin && valMax == 0 ){
-        var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent();
-        affichage.push(parentCategory);
-      }else if( price <= valMax && valMin == 0 ){
-        var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent();
+        var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent().parent().parent();
+        console.log(parentCategory);
         affichage.push(parentCategory);
       }
     }//for
@@ -93,7 +131,7 @@ $(function() {
     var   affichage = [];
     var price;
     for(var i=0; i<n; i++){
-      var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent();
+      var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent().parent().parent();
 
       price = $(tabCatPrice[i]).text()
       price = price.replace("€", ".");
