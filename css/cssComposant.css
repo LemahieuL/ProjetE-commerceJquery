@@ -23,6 +23,12 @@ i {
     width: 100%;
 }
 
+.amount{
+  position:absolute;
+  z-index:5;
+  top:50%;
+}
+
 /*  Media */
 @media only screen and (max-width: 992px) {
   .text-center-resp {
