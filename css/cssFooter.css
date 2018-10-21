@@ -1,41 +1,41 @@
 .footer{
-  border: 5px solid;
   background-color: black;
 }
-.Services1{
-height: 50px;
-width: auto;
-border: solid 5px black;
-color: white;
-}
 .Services{
+height: auto;
+}
+.Services li{
+  display: flex;
+}
+
+.ServicesListe{
+  display: flex;
+  list-style: none;
+  margin-top: 10px;
+  margin-left: -45px;
 
 }
-.ServicesListe{
-  display: inline-flex;
-  list-style: none;
-  flex-wrap: wrap;
-}
-.list__item{
-  display: flex;
-  text-align: center;
-}
+
 .icon{
-	background:#069;
-    vertical-align: middle;
-    line-height: 1.2em;
-    height: 55px;
-    width: 55px;
-    border-radius: 10px
+	background: #bbae03;
+    height: 65px;
+    width: 65px;
+    border-radius: 10px;
+    margin-right: 20px;
 }
-.icon img{
-  height: 37px;
-  width: 48;
+.icon i{
+line-height: 70px;
+align-items: center;
+color: black;
 }
 .label{
-    /* text-align: center; */
-    line-height: 20px;
-
+color: white;
+text-transform: uppercase;
+align-items: center;
+font-size: 15px;
+}
+.label span{
+  color: red;
 }
 #Plus{
   background-color: #222227;
@@ -44,9 +44,8 @@ color: white;
   list-style: none;
 }
 #divers{
-  /* background-color: yellow; */
-}
 
+}
 .Paiement, .Partenaire{
 box-sizing: border-box;
 background-color: grey;
@@ -55,26 +54,30 @@ height: 80px;
 margin-top: 10px;
 margin-bottom: 10px;
 }
-.Partenaire img{
-  text-align: center;
+.Paiement ul{
+  display: inline;
 }
 .moyenPaiement{
-  display: flex;
   list-style: none;
   text-align: center;
-  margin-left: 70px;
+  float: left;
+  margin-left: 30px
 }
 .moyenPaiement li{
   text-align: center;
-  margin-right: 80px;
-}
 
+}
+.Partenaire img{
+  display:block;
+  width:auto;
+  margin-left:auto;
+  margin-right:auto;
+}
 .contact, .networks{
   box-sizing: border-box;
   background-color: grey;
   margin-top: 10px;
   margin-bottom: 10px;
-
 }
 #button{
   display: block;
@@ -93,4 +96,11 @@ margin-bottom: 10px;
 .coordonnée{
   background-color: black;
   color:white;
+}
+.Title{
+  color: green;
+  margin-left: 10px;
+  font-size: large;
+  font-weight: bold;
+  text-decoration: overline;
 }

@@ -1082,41 +1082,42 @@
     <footer class="footer">
       <!-- ***************************************LISTE DES SERVICES *******************************************************************************-->
       <div class="container-fluid Services1">
-        <div class="Services">
+
+        <div class="row Services">
           <ul class= "ServicesListe">
-            <li class="col list__item">
+            <li class="col">
               <div class="icon">
-                <img src="image/icon-creditcard.png" alt="">
+                <i class="far fa-credit-card fa-3x"></i>
               </div>
               <div class="label">Débit à <span>l'éxpédition</span></div>
             </li>
 
-            <li class="col list__item">
+            <li class="col">
               <div class="icon">
-                <img src="image/icon-truck.png" alt="">
+                <i class="fas fa-truck fa-3x"></i>
               </div>
-              <div class="label">livraison <span>Express</span></div>
+              <div class="label">Livraison <span>Express</span></div>
             </li>
 
-            <li class="col list__item">
+            <li class="col">
               <div class="icon">
-                <img src="image/icon-euro.png" alt="">
+                <i class="fas fa-euro-sign fa-3x"></i>
               </div>
-              <div class="label">facilité de <span>Paiement</span></div>
+              <div class="label">Facilité de <span>Paiement</span></div>
             </li>
 
-            <li class="col list__item">
+            <li class="col">
               <div class="icon">
-                <img src="image/handshake-solid.svg" alt="">
+                <i class="fas fa-handshake fa-3x"></i>
               </div>
               <div class="label">Elu <span>Service client de l'année 2018</span></div>
             </li>
 
-            <li class="col list__item">
+            <li class="col">
               <div class="icon">
-                <img src="image/smile-regular.svg" alt="">
+                <i class="fas fa-smile fa-3x"></i>
               </div>
-              <div class="label">Tous nos articles sont <span>Garantie 5 Ans</span></div>
+              <div class="label">Nos articles<br /> sont <span>Garantie 5 Ans</span></div>
             </li>
           </ul>
         </div>
@@ -1126,21 +1127,33 @@
       <!-- *****************************************DIV CONTENANT PARTENAIRES ET MOYEN DE PAIEMENT*********************************************************************-->
       <div class="container-Fluid">
         <div class="row" id="divers">
-          <div class="col">
-            <div class="Paiement">
-              <span class="PaiementTitle">Moyens de paiement</span>
-
+          <div class="col-6 col-md Paiement">
+              <span class="Title">Moyens de paiement</span>
+              <div class="col-6 col-md">
               <ul class="moyenPaiement">
                 <li><i class="fab fa-cc-visa fa-2x"></i></li>
+              </ul>
+            </div>
+                <div class="col-6 col-md">
+              <ul class="moyenPaiement">
                 <li><i class="fab fa-cc-mastercard fa-2x"></i></li>
+              </ul>
+            </div>
+                <div class="col-6 col-md">
+                <ul class="moyenPaiement">
                 <li><i class="fab fa-cc-paypal fa-2x"></i></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <ul class="moyenPaiement">
                 <li><i class="fab fa-bitcoin fa-2x"></i></li>
               </ul>
             </div>
           </div>
-          <div class="col">
+
+          <div class="col-6">
             <div class="Partenaire">
-              <span class="PartenaireTitle">Livraison</span><br />
+              <span class="Title">Livraison</span><br />
               <img src="image/sprite-footer-carrier.6964fa94.png" class="img-fluid">
             </div>
           </div>
@@ -1151,29 +1164,29 @@
       <!--***********************************************DEBUT DE LIEN ACCÉDANT AU MENU/NAVBAR*******************************************************************-->
       <div class="container-fluid lienMenu" >
         <div class="row" id="Plus">
-          <div class="col-12 col-md c-navigation__block">
-            <span class="c-block__title">Materiel.net</span>
+          <div class="col-12 col-md">
             <ul>
-              <li><a href="https://www.materiel.net/n4605/ ">Qui sommes-nous ?</a></li>
-              <li><a href="https://www.materiel.net/n4612/">Nos services</a></li>
-              <li><a href="https://www.materiel.net/magasins/">Les magasins Materiel.net</a></li>
-              <li><a href="https://www.materiel.net/faq-informations/q165-nous-contacter/">Contactez-nous</a></li>
+              <li><a href="#">Processeur</a></li>
             </ul>
           </div>
-
-          <div class="col-12 col-md c-navigation__block">
-            <span class="c-block__title">Materiel.net &amp; vous</span>
+          <div class="col-12 col-md">
             <ul>
-              <li><a href="https://www.materiel.net/faq-informations/q163-environnement/">Notre démarche écologique</a></li>
-              <li><a href="https://www.materiel.net/faq-informations/q164-materiel-net-recrute/">Materiel.net recrute</a></li>
-              <li><a href="https://affiliation.materiel.net/affiliates/index.php">Notre programme d'affiliation</a></li>
+              <li><a href="#">Carte Mère</a></li>
             </ul>
           </div>
-          <div class="col-12 col-md c-navigation__block">
-            <span class="c-block__title">Guides &amp; SAV</span>
+          <div class="col-12 col-md">
             <ul>
-              <li><a href="https://www.materiel.net/guide-achat/">Guides d'achats et tutoriels</a></li>
-              <li><a href="https://www.materiel.net/faq-informations/">Foire Aux Questions</a></li>
+              <li><a href="#">Carte graphique</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md">
+            <ul>
+            <li><a href="#">Mémoire</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md">
+            <ul>
+             <li><a href="#">Panier</a></li>
             </ul>
           </div>
         </div>
@@ -1185,7 +1198,7 @@
 
           <div class="col">
             <div class="contact">
-              <span class="ContactTitle">Une équipe d'experts à votre service</span><br/>
+              <span class="Title">Une équipe d'experts à votre service</span><br/>
               <button type="button" name="button" class="btn btn-dark" id="button">Contactez-nous</button>
               <form id="form">
                 <div class="">
@@ -1210,7 +1223,7 @@
 
           <div class="col">
             <div class="networks">
-              <span class="NetworkTitle">Materiel.net sur les réseaux sociaux</span>
+              <span class="Title"><img src="image/teamLFVF.png" class="img-fluid">sur les réseaux sociaux:</span>
               <ul class="socialList">
                 <li><a href="https://www.facebook.com"><i class="fab fa-facebook fa-2x"></i></a></li>
                 <li><a href="https://www.twitter.com/?lang=fr"><i class="fab fa-twitter fa-2x"></i></a></li>
