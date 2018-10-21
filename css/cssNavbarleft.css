@@ -9,7 +9,7 @@
   height: 30%;
 }
 .navbar-text{
-    font-size: 30px;
+    font-size: 25px;
 }
 .navbar-left.fixed-top {
     top: 94px;
@@ -17,7 +17,4 @@
 #inputSearchPriceMinProduct,
 #inputSearchPriceMaxProduct{
   width: 50px;
-}
-#seachBar{
-  width: 100%
 }
