@@ -1,34 +1,67 @@
 $(function() {
 
-  $("[type='checkbox']").change(function() {
-    var catId = $(this).data("category");
-    if ($(this).is(":checked")) {
-      var array = ["processor", "motherboard", "graphics-card", "ram"];
-      for (var i = 0; i < 4; i++) {
-        if ($("[name='" + array[i] + "']").is(":checked")) {
-          $(".category[data-category='" + array[i] + "']").show();
-        } else {
-          $(".category[data-category='" + array[i] + "']").hide();
-        }
+  // Affiche seulement les composants cocher (version codeurh24)
+  $("[type='checkbox']").change(function(){
+    var checkboxs = $("input:checked");
+    var n = checkboxs.length;
+    var displays = [];
+    for(var i=0; i<n; i++){
+      displays.push(checkboxs[i].name);
+    }
+    n = displays.length;
+    if( n == 0){
+      $(".category[data-category]").show();
+    }else{
+      $(".category[data-category]").hide();
+    }
+    for(var i=0; i<n; i++){
+      if(displays[i] == "processor"){
+        $(".category[data-category=processor]").show();
       }
-    } else {
-      var array = ["processor", "motherboard", "graphics-card", "ram"];
-      for (var i = 0; i < 4; i++) {
-        if ($("[name='" + array[i] + "']").not(":checked")) {
-          $(".category[data-category='" + array[i] + "']").show();
-        } else {
-          $(".category[data-category='" + array[i] + "']").hide();
-        }
+      if(displays[i] == "motherboard"){
+        $(".category[data-category=motherboard]").show();
+      }
+      if(displays[i] == "graphics-card"){
+        $(".category[data-category=graphics-card]").show();
+      }
+      if(displays[i] == "ram"){
+        $(".category[data-category=ram]").show();
       }
     }
+    return false;
   });
+
+  // Affiche seulement les composants cocher (version fabien)
+  // $("[type='checkbox']").change(function() {
+  //   var catId = $(this).data("category");
+  //   if ($(this).is(":checked")) {
+  //     var array = ["processor", "motherboard", "graphics-card", "ram"];
+  //     for (var i = 0; i < 4; i++) {
+  //       if ($("[name='" + array[i] + "']").is(":checked")) {
+  //         $(".category[data-category='" + array[i] + "']").show();
+  //       } else {
+  //         $(".category[data-category='" + array[i] + "']").hide();
+  //       }
+  //     }
+  //   } else {
+  //     var array = ["processor", "motherboard", "graphics-card", "ram"];
+  //     for (var i = 0; i < 4; i++) {
+  //       if ($("[name='" + array[i] + "']").not(":checked")) {
+  //         $(".category[data-category='" + array[i] + "']").show();
+  //       } else {
+  //         $(".category[data-category='" + array[i] + "']").hide();
+  //       }
+  //     }
+  //   }
+  // });
 
   $("#btnSearchOfProduct").click(function(){
     var affichage = []; // memorise les balises qui corespondent a la recherche
     var val = $("#inputSearchOfProduct").val(); // recupere la valeur de recherche taper par le visiteur
     val = val.toLowerCase(); // rend la recherche insensible a la majuscule partie 1 sur 2.
     // RECHERCHE PAR TITRE PRODUIT
-    var tabCatH1 = $(".category h1") // liste tout les titres de produits
+    var tabCatH1 = $(".category:visible h1") // liste tout les titres de produits
+
     var n = tabCatH1.length; // compte le nombre de titre produit pour la boucle for
     for(var i=0; i<n; i++){ // pour chaque titre de produit
       var text = tabCatH1[i].outerText; // on recuperer le contenu text du titre
@@ -36,12 +69,11 @@ $(function() {
       if(text.indexOf(val) != -1){ // si une partie du titre corespond a la recherche
         var baliseH1 = $(".category h1")[i]; // on met la balise en memoire
         // recuperation de la balise categorie du titre recherche
-        var parentCategory =  $(baliseH1).parent().parent().parent().parent() ;
+        var parentCategory =  $(tabCatH1[i]).parent().parent().parent().parent() ;
         // ajout (a la liste de resultats de recherche)de la balise que l'ont vient de recuperer
         affichage.push(parentCategory);
       }
     }//for
-
     // pour n'afficher que les balises corespondant a la recherche ont cache tout les produits
     $(".category").hide();
     // compte le nombre de resultat de la recherche
@@ -58,21 +90,22 @@ $(function() {
     var valMin = Number($("#inputSearchPriceMinProduct").val());
     var valMax = Number($("#inputSearchPriceMaxProduct").val());
 
-    var tabCatPrice = $(".font-weight-bold");
+    var tabCatPrice = $(".font-weight-bold:visible");
     //console.log(tabCatPrice);
     var n = tabCatPrice.length;
+
     for(var i=0; i<n; i++){ // pour chaque titre de produit
       var price = $(tabCatPrice[i]).text()
       price = price.replace("€", ".");
       price = Number(price);
       if(  price >= valMin && price <= valMax  && valMin <= valMax ){
-        var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent();
+        var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent().parent().parent();
         affichage.push(parentCategory);
       }else if( price >= valMin && valMax == 0 ){
-        var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent();
+        var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent().parent().parent();
         affichage.push(parentCategory);
       }else if( price <= valMax && valMin == 0 ){
-        var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent();
+        var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent().parent().parent();
         affichage.push(parentCategory);
       }
     }//for
@@ -88,12 +121,12 @@ $(function() {
 
   $("#triProduit").change(function(){
     //console.log(this.value);
-    var tabCatPrice = $(".font-weight-bold");
+    var tabCatPrice = $(".product .font-weight-bold:visible");
     var n = tabCatPrice.length;
     var   affichage = [];
     var price;
     for(var i=0; i<n; i++){
-      var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent();
+      var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent().parent().parent();
 
       price = $(tabCatPrice[i]).text()
       price = price.replace("€", ".");

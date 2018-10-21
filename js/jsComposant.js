@@ -3,7 +3,7 @@ $(function () {
   window.counter = function(fab) {
     var number = Number($(fab).attr("data-id-product"));
     var amount = referenceExist(number);
-    $(fab).parent().parent().find(".amount").text(amount);
+    $(fab).parent().parent().parent().parent().find(".amount").text(amount);
   }
 
   $("i").click(function() {
