@@ -103,18 +103,14 @@ $(function() {
     var tabCatPrice = $(".font-weight-bold");
     //console.log(tabCatPrice);
     var n = tabCatPrice.length;
+
     for(var i=0; i<n; i++){ // pour chaque titre de produit
       var price = $(tabCatPrice[i]).text()
       price = price.replace("€", ".");
       price = Number(price);
       if(  price >= valMin && price <= valMax  && valMin <= valMax ){
-        var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent();
-        affichage.push(parentCategory);
-      }else if( price >= valMin && valMax == 0 ){
-        var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent();
-        affichage.push(parentCategory);
-      }else if( price <= valMax && valMin == 0 ){
-        var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent();
+        var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent().parent().parent();
+        console.log(parentCategory);
         affichage.push(parentCategory);
       }
     }//for
