@@ -131,7 +131,7 @@ $(function() {
     var   affichage = [];
     var price;
     for(var i=0; i<n; i++){
-      var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent();
+      var parentCategory =  $(tabCatPrice[i]).parent().parent().parent().parent().parent().parent();
 
       price = $(tabCatPrice[i]).text()
       price = price.replace("€", ".");
