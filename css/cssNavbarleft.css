@@ -3,12 +3,21 @@
   background-color: #ffffff17;
   width: 100%;
   padding: 7px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #9f8646;
+  height: 30%;
 }
-
+.navbar-text{
+    font-size: 30px;
+}
 .navbar-left.fixed-top {
     top: 94px;
 }
 #inputSearchPriceMinProduct,
 #inputSearchPriceMaxProduct{
   width: 50px;
+}
+#seachBar{
+  width: 100%
 }
