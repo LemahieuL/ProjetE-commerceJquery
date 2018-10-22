@@ -31,31 +31,8 @@ $(function() {
     return false;
   });
 
-  // Affiche seulement les composants cocher (version fabien)
-  // $("[type='checkbox']").change(function() {
-  //   var catId = $(this).data("category");
-  //   if ($(this).is(":checked")) {
-  //     var array = ["processor", "motherboard", "graphics-card", "ram"];
-  //     for (var i = 0; i < 4; i++) {
-  //       if ($("[name='" + array[i] + "']").is(":checked")) {
-  //         $(".category[data-category='" + array[i] + "']").show();
-  //       } else {
-  //         $(".category[data-category='" + array[i] + "']").hide();
-  //       }
-  //     }
-  //   } else {
-  //     var array = ["processor", "motherboard", "graphics-card", "ram"];
-  //     for (var i = 0; i < 4; i++) {
-  //       if ($("[name='" + array[i] + "']").not(":checked")) {
-  //         $(".category[data-category='" + array[i] + "']").show();
-  //       } else {
-  //         $(".category[data-category='" + array[i] + "']").hide();
-  //       }
-  //     }
-  //   }
-  // });
 
-  $("#btnSearchOfProduct").click(function(){
+  var searchWordProduct = function(){
     var affichage = []; // memorise les balises qui corespondent a la recherche
     var val = $("#inputSearchOfProduct").val(); // recupere la valeur de recherche taper par le visiteur
     val = val.toLowerCase(); // rend la recherche insensible a la majuscule partie 1 sur 2.
@@ -64,16 +41,23 @@ $(function() {
 
     var n = tabCatH1.length; // compte le nombre de titre produit pour la boucle for
     for(var i=0; i<n; i++){ // pour chaque titre de produit
-      var text = tabCatH1[i].outerText; // on recuperer le contenu text du titre
+
+      var text = $(tabCatH1[i]).text(); // on recuperer le contenu text du titre
       text = text.toLowerCase();// rend la recherche insensible a la majuscule partie 2 sur 2.
+
       if(text.indexOf(val) != -1){ // si une partie du titre corespond a la recherche
+
         var baliseH1 = $(".category h1")[i]; // on met la balise en memoire
         // recuperation de la balise categorie du titre recherche
+
         var parentCategory =  $(tabCatH1[i]).parent().parent().parent().parent() ;
+
         // ajout (a la liste de resultats de recherche)de la balise que l'ont vient de recuperer
         affichage.push(parentCategory);
       }
+
     }//for
+
     // pour n'afficher que les balises corespondant a la recherche ont cache tout les produits
     $(".category").hide();
     // compte le nombre de resultat de la recherche
@@ -82,9 +66,8 @@ $(function() {
       $(affichage[i]).show(); // jquery affiche cette balise
     }
     return false; // fin de la fonction
-  });
-
-  $("#btnSearchPriceProduct").click(function(){
+  }
+  var searchPrice = function(){
     var affichage = []; // memorise les balises qui corespondent a la recherche
 
     var valMin = Number($("#inputSearchPriceMinProduct").val());
@@ -116,8 +99,36 @@ $(function() {
     for(var i=0; i<n; i++){ // pour chaque resultat ont obtient une balise javascript
       $(affichage[i]).show(); // jquery affiche cette balise
     }
+  }
+
+
+
+
+  $("#btnSearchOfProduct").click(function(){
+    searchWordProduct();
     return false;
   });
+  $("#inputSearchOfProduct").keyup(function(){
+    var text = $(this).val();
+    if( text.length == 0){
+      $("div[data-category]").css("display", "flex");
+      searchPrice()
+    }
+  });
+
+
+  $("#btnSearchPriceProduct").click(function(){
+    searchPrice()
+    return false;
+  });
+  $("#inputSearchPriceMinProduct, #inputSearchPriceMaxProduct").keyup(function(){
+    var text = $(this).val();
+    if( text.length == 0){
+      $("div[data-category]").css("display", "block");
+      searchWordProduct();
+    }
+  });
+
 
   $("#triProduit").change(function(){
     //console.log(this.value);
