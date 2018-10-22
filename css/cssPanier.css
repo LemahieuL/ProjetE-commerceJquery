@@ -28,7 +28,8 @@
 }
 
 .modal-content .price {
-  color: red;
+  font-weight: bold;
+  color: #C02A33;
 }
 
 .modal-content .idProduit {
