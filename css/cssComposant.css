@@ -1,3 +1,8 @@
+.h5 {
+  color: #BF9D47;
+  font-weight: bold;
+}
+
 .text-category-up {
   font-size: 70%;
   top: -.3em;
@@ -8,13 +13,12 @@
   border-bottom: 2px solid black;
   margin: 20px 0 20px 0;
 }
-.category > div:nth-child(1){
-  background-color: #FFF;
-}
 
 i {
   cursor: pointer;
+  color: #BF9D47;
 }
+
 .text-center-resp .text-center-resp {
   color: #FFF;
   background-color: #ffffff17;
