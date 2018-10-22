@@ -4,4 +4,8 @@ $(function() {
     var amount = referenceExist(number);
     $(".product i[data-id-product=" + number + "]").parent().parent().find(".amount").text(amount);
   });
+
+  $(document).on('click','.navbar-collapse.show',function(e) {
+    $(this).collapse('hide');
+  });
 });
