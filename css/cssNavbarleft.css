@@ -2,7 +2,8 @@
   color: #FFF;
   background-color: #ffffff17;
   width: 100%;
-  padding: 7px;
+  padding-top: 10px;
+  padding-bottom: 15px;
   border-style: solid;
   border-width: 2px;
   border-color: #BF9D47;
@@ -96,6 +97,10 @@ input:checked + label::before {
   -webkit-appearance: none; /* for webkit browsers */
   -moz-appearance: none; /* for firefox */
   appearance: none; /* for modern browsers */
+}
+
+.repare {
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
