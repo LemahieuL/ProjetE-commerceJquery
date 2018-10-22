@@ -40,7 +40,7 @@
    height: 85%;
 }
 
-.hide {
+.img-hide {
   display: none;
 }
 
@@ -50,11 +50,11 @@
     height: 100%;
   }
 
-  .hide {
+  .img-hide {
     display: block;
   }
 
-  .show {
+  .img-show {
     display: none;
   }
 
