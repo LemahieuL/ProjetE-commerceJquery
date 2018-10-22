@@ -11,6 +11,15 @@ footer p {
   margin-bottom: 0;
 }
 
+.mw-75 {
+  width: 75%;
+}
+
+@media screen and (max-width: 990px) {
+  .mw-75 {
+    width: 100%;
+  }
+}
 
 /* footer {
   color: goldenrod	;
