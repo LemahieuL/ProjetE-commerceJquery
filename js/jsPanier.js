@@ -2,10 +2,7 @@
 var tableauProduits = [];
 var PrixTotalPanier = 0;
 var quantiteProduitPanier;
-window.tableauPanier = [
-  [22, "MSI GeForce GTX 1070 Gaming X - 8 Go", 2, 514.96],
-  [51, "MSI GeForce GTX 1060 Gaming X - 8 Go", 2, 339.95]
-];
+window.tableauPanier = [];
 
 
 $(function(){
