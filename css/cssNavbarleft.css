@@ -10,12 +10,15 @@
   height: 30%;
   margin-top: 20px;
 }
+
 .navbar-text{
-    font-size: 25px;
+    font-size: 20px;
 }
+
 .navbar-left.fixed-top {
     top: 94px;
 }
+
 #inputSearchPriceMinProduct, #inputSearchPriceMaxProduct {
   width: 100%;
 }
@@ -97,10 +100,6 @@ input:checked + label::before {
   -webkit-appearance: none; /* for webkit browsers */
   -moz-appearance: none; /* for firefox */
   appearance: none; /* for modern browsers */
-}
-
-.repare {
-  width: 100%;
 }
 
 @media screen and (min-width: 768px) {

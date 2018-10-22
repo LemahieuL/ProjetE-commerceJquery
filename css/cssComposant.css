@@ -39,6 +39,7 @@ i {
 
 #link-graphics-card:target, #link-processor:target, #link-motherboard:target, #link-ram:target {
     padding-top: 4em;
+    margin-top: -4rem;
 }
 
 /*  Media */
