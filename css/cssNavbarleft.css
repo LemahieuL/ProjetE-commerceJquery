@@ -2,19 +2,23 @@
   color: #FFF;
   background-color: #ffffff17;
   width: 100%;
-  padding: 7px;
+  padding-top: 10px;
+  padding-bottom: 15px;
   border-style: solid;
   border-width: 2px;
   border-color: #BF9D47;
   height: 30%;
   margin-top: 20px;
 }
+
 .navbar-text{
-    font-size: 25px;
+    font-size: 20px;
 }
+
 .navbar-left.fixed-top {
     top: 94px;
 }
+
 #inputSearchPriceMinProduct, #inputSearchPriceMaxProduct {
   width: 100%;
 }

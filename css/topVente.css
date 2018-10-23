@@ -1,6 +1,7 @@
-#top-des-ventes{
+#top-des-ventes {
   padding-bottom: 40px;
 }
+
 #top-des-ventes .card {
     background-color: #222;
     border: 2px solid #ad0101;
@@ -8,13 +9,16 @@
     padding-bottom: 40px;
     width: 100%;
 }
-#top-des-ventes .card p{
+
+#top-des-ventes .card p {
   color: red;
 }
-.title-separator{
+
+.title-separator {
   color: red;
 }
-.separator-red{
+
+.separator-red {
   display: block;
   height: 5px;
   /* background-color: red; */
@@ -25,19 +29,38 @@
     width: 70%;
     margin: auto;
 }
+
 .card-title {
     min-height: 70px;
     font-size: 1rem;
 }
-.promo img{
+
+.promo img {
    width: 85%;
-   height: 85%; 
+   height: 85%;
 }
 
-/* @media screen and (max-width: 640px) {
-  #top-des-ventes .card {
+.img-hide {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .promo img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-hide {
+    display: block;
+  }
+
+  .img-show {
+    display: none;
+  }
+
+  /* #top-des-ventes .card {
       padding-bottom: 40px;
       width: 71%;
       margin-top: 40px;
-  }
-} */
+  } */
+}
