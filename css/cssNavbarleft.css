@@ -37,7 +37,7 @@ label {
   display: block;
   position: relative;
   padding-left: 50px;
-  border: 2px solid #BF9D47;
+  border: 1px solid #BF9D47;
   color: #BF9D47;
   box-shadow: 0 0 20px rgba(0, 0, 0, .2);
   white-space: nowrap;
@@ -72,19 +72,19 @@ input:checked + label::before {
 }
 
 .toggle2 {
-  border: 2px solid #BF9D47;
-  height: 37.5px;
+  border: 1px solid #BF9D47;
+  height: 34px;
   width: 100%;
   background-color: transparent;
   color: #BF9D47;
 }
 
 .formButton {
-  border: 2px solid #BF9D47;
+  border: 1px solid #BF9D47;
   background-color: transparent;
   color: #BF9D47;
-  height: 37.5px;
-  width: 37px;
+  height: 34px;
+  width: 35px;
 }
 
 .b-select-wrap::after {
@@ -93,7 +93,7 @@ input:checked + label::before {
   position: absolute;
   right: 0px;
   top: -15px;
-  font-size: 35px;
+  font-size: 34px;
 }
 
 .b-select {
@@ -102,12 +102,25 @@ input:checked + label::before {
   appearance: none; /* for modern browsers */
 }
 
+.margin-left {
+  margin-left: 10px;
+}
+
+.btn-outline-danger:hover {
+  color: #fff;
+  background-color: #C02A33;
+}
+
 @media screen and (min-width: 768px) {
   .test {
     position: sticky;
     top: 70px;
   }
 }
-.border-gold{
-  width: 100%;
+
+@media screen and (max-width: 900px) {
+  .margin-left {
+    margin-left: 0px;
+    margin-right: 1px;
+  }
 }

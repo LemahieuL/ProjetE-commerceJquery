@@ -24,7 +24,7 @@ $(function(){
       </div>
       <div class="col-8 col-lg-8 col-xl-8 text-right" style="white-space: nowrap;min-width:72px;padding:0;">
         <input type="button" class="buttonMoinQtPanier" value="<" style="display:inline;width:15px;padding:0;" />
-        <input type="number" min="1" max="99" name="quantite" value="${qt}" style="width:40px;text-align:center;" />
+        <input type="text" min="1" max="99" name="quantite" value="${qt}" style="width:40px;text-align:center;" />
         <input type="button" class="buttonPlusQtPanier" value="> " style="display:inline;width:15px;padding:0;" />
       </div>
       <div class="col-3 text-right">

@@ -1,4 +1,5 @@
 $(function () {
+  // window.countclick = 0;
 
   window.counter = function(fab) {
     var number = Number($(fab).attr("data-id-product"));
@@ -8,6 +9,8 @@ $(function () {
 
   $("i").click(function() {
     counter(this);
+    // window.countclick++;
+    // console.log(countclick);
   });
 
   $(".modal-body").on("click", ".buttonPlusQtPanier, .buttonMoinQtPanier",function() {
