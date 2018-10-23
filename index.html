@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/cssComposant.css" />
   <!-- <link rel="stylesheet" href="css/cssFooter.css" /> -->
   <link rel="stylesheet" href="css/footer.css" />
-  <title>LFVF - SIte E-commerce de La team Luc</title>
+  <title>LFVF - Site E-commerce</title>
 </head>
 <body>
 
@@ -86,7 +86,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title">MSI GeForce GTX 1060 Gaming X - 6 Go</h5>
                 <p class="font-weight-bold">339€<span class="text-category-up">95</span></p>
-                <i class="fas fa-2x fa-cart-arrow-down"></i>
+                <i data-id-product="1" onclick="ajouterAuPanier(1, 'MSI GeForce GTX 1060 Gaming X - 6 Go', '339.95'); return false;" class="fas fa-cart-plus fa-2x"></i>
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title">Corsair Vengeance LPX Black DDR4 2 x 8 Go 3000 MHz CAS 15</h5>
                 <p class="font-weight-bold">339€<span class="text-category-up">95</span></p>
-                <i class="fas fa-2x fa-cart-arrow-down"></i>
+                <i data-id-product="6" onclick="ajouterAuPanier(6, 'Intel Core i7 7700K (4,2 GHz)', '339.95'); return false;" class="fas fa-2x fa-cart-arrow-down"></i>
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title">MSI B250I Gaming Pro AC</h5>
                 <p class="font-weight-bold">339€<span class="text-category-up">95</span></p>
-                <i class="fas fa-2x fa-cart-arrow-down"></i>
+                <i data-id-product="11" onclick="ajouterAuPanier(11, 'G.Skill Extreme3 Ripjaws X DDR3 2 x 4 Go 1600 MHz CAS 9', '71.85'); return false;" class="fas fa-2x fa-cart-arrow-down"></i>
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title">Intel Core i5 7600K</h5>
                 <p class="font-weight-bold">339€<span class="text-category-up">95</span></p>
-                <i class="fas fa-2x fa-cart-arrow-down"></i>
+                <i data-id-product="16" onclick="ajouterAuPanier(16, 'MSI H110M PRO-VD', '59.95'); return false;" class="fas fa-2x fa-cart-arrow-down"></i>
               </div>
             </div>
           </div>
@@ -1181,7 +1181,7 @@
         </div>
         <div class="row">
           <div class="col-lg-12 mt-3">
-            <p class="mb-0">Website by Luc, Florant, Victoria & Fabien</p>
+            <p class="mb-0">Website by Luc, Florent, Victoria & Fabien</p>
           </div>
         </div>
       </div>
@@ -1439,6 +1439,7 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
       <script src="js/jsPanier.js"></script>
       <script src="js/jsNavbarleft.js"></script>
+      <script src="js/topVente.js"></script>
       <script src="js/jsComposant.js"></script>
       <script src="js/jsFooter.js"></script>
     </body>

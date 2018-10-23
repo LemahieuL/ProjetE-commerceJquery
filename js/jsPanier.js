@@ -46,6 +46,7 @@ $(function(){
     $(".modal-body .container-fluid").html('');
     // variable global pou le total de la commande
     window.PrixTotalPanier = 0;
+    window.totalProduitPanier = 0;
     // compte le nombre d'article dans le panier
     var countIndex = 0;
     // si les données du panier ne sont pas vide
@@ -55,7 +56,10 @@ $(function(){
       // Chaque element du panier est lui aussi un tableau (voir fonction ajouterAuPanier() )
       addProduitDOMPanier(index, element[0], element[1], element[2], element[3])
       window.PrixTotalPanier  += Number(element[3])*Number(element[2]);
-      $("#nbrTotalProduitPanier").text(++countIndex);
+      window.totalProduitPanier += Number(element[2]);
+      ++countIndex;
+      $("#nbrTotalProduitPanier").text(window.totalProduitPanier);
+      // $("#nbrTotalProduitPanier").text(++countIndex);
     })
 
     // si il y a 1 produit, le mot produit afficher dans le titre du panier ne prend pas de S
