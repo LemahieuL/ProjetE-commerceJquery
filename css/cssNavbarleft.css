@@ -108,3 +108,6 @@ input:checked + label::before {
     top: 70px;
   }
 }
+.border-gold{
+  width: 100%;
+}
