@@ -124,7 +124,7 @@ $(function() {
   $("#inputSearchPriceMinProduct, #inputSearchPriceMaxProduct").keyup(function(){
     var text = $(this).val();
     if( text.length == 0){
-      $("div[data-category]").css("display", "block");
+      $("div[data-category]").css("display", "flex");
       searchWordProduct();
     }
   });
