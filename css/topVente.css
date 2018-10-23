@@ -4,25 +4,25 @@
 
 #top-des-ventes .card {
     background-color: #222;
-    border: 2px solid #ad0101;
-    color: #bbae03;
+    border: 2px solid #C02133;
+    color: #BF9D47;
     padding-bottom: 40px;
     width: 100%;
 }
 
 #top-des-ventes .card p {
-  color: red;
+  color: #C02133;
 }
 
 .title-separator {
-  color: red;
+  color: #C02133;
 }
 
 .separator-red {
   display: block;
   height: 5px;
   /* background-color: red; */
-  background: linear-gradient(to right, rgba(255,0,4,0) 0%,rgba(255,0,4,0) 1%,rgba(255,0,0,1) 50%,rgba(255,0,0,0.98) 51%,rgba(255,0,4,0) 100%);
+  background: linear-gradient(to right, rgba(192,33,51,0) 0%,rgba(192,33,51,0) 1%,rgba(192,33,51,1) 50%,rgba(192,33,51,0.98) 51%,rgba(192,33,51,0) 100%);
 }
 
 .card-img-top {
@@ -31,6 +31,7 @@
 }
 
 .card-title {
+    font-weight: bold;
     min-height: 70px;
     font-size: 1rem;
 }
